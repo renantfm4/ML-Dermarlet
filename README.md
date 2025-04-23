@@ -18,18 +18,9 @@ Centralizar e organizar:
 ## 📁 Estrutura do Repositório
 
 ```bash
-├── data/               # Dados públicos ou sintéticos
-├── notebooks/          # Notebooks de experimentos
-├── models/             # Modelos treinados
-├── src/                # Código-fonte (treinamento, avaliação, etc.)
-├── pipelines/          # Pipelines automatizadas (Airflow, MLflow, etc.)
-├── metrics/            # Resultados e relatórios de avaliação
-├── tests/              # Scripts de testes
-├── requirements.txt    # Dependências do projeto
-├── README.md           # Documentação principal
-├── CONTRIBUTING.md     # Guia de contribuição
-├── CHANGELOG.md        # Registro de mudanças
-└── LICENSE             # Licença do projeto
+├── aaaa/               # aaaaaa
+├── aaaaa          # aaaaaa
+
 ```
 
 ---
