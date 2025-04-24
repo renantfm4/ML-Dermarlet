@@ -78,13 +78,13 @@ Confira o [guia de contribuição](https://www.dermalert.ai/guia-de-contribuicao
 
 Contribuições bem-vindas:
 
-- feat: nova funcionalidade
-- fix: correção de bug
-- docs: alterações na documentação
-- style: mudanças visuais ou de formatação
-- refactor: refatoração sem mudança de funcionalidade
-- test: criação ou alteração de testes
-- chore: tarefas administrativas
+- :sparkles: feat: nova funcionalidade
+- :bug: fix: correção de bug
+- :books: docs: alterações na documentação
+- :art: style: mudanças visuais ou de formatação
+- :recycle: refactor: refatoração sem mudança de funcionalidade
+- :white_check_mark: test: criação ou alteração de testes
+- :wrench: chore: tarefas administrativas
 
   
 ---
