@@ -104,4 +104,4 @@ Contribuições bem-vindas:
 
 | Versão | Data | Descrição | Autor | Revisor |
 | :----: | ---- | --------- | ----- | ------- |
-| `1.0`  |23/04/2025| Adiciona descrição, link para gitpage e como rodar aplicação | [Esther Sena](https://github.com/esmsena) e Davi Araujo |   |
+| `1.0`  |23/04/2025| Adiciona descrição, link para gitpage e como rodar aplicação | [Esther Sena](https://github.com/esmsena) e [Davi Araújo](https://github.com/dcasseb) |   |
