@@ -18,19 +18,21 @@ Centralizar e organizar:
 ## 📁 Estrutura do Repositório
 
 ```bash
-├── data/               # Dados públicos ou sintéticos
-├── notebooks/          # Notebooks de experimentos
-├── models/             # Modelos treinados
-├── src/                # Código-fonte (treinamento, avaliação, etc.)
-├── pipelines/          # Pipelines automatizadas (Airflow, MLflow, etc.)
-├── metrics/            # Resultados e relatórios de avaliação
-├── tests/              # Scripts de testes
-├── requirements.txt    # Dependências do projeto
-├── README.md           # Documentação principal
-├── CONTRIBUTING.md     # Guia de contribuição
-├── CHANGELOG.md        # Registro de mudanças
-└── LICENSE             # Licença do projeto
+├── config/                     # Arquivos de configuração do projeto
+├── dags/                       # Definições de DAGs para orquestração com Airflow
+├── data/                       # Dados do projeto, incluindo imagens divididas em treino e teste
+├── docs/                       # Documentação em Markdown para MkDocs
+├── src/                        # Código-fonte principal
+├── tests/                      # Testes automatizados
+├── .gitignore                  # Arquivos e pastas ignorados pelo Git
+├── LICENSE                     # Licença do projeto
+├── README.md                   # Documentação principal do repositório
+├── Dockerfile                  # Imagem Docker do frontend (Expo) (ADD FUTURAMENTE)
+├── package.json                # Dependências JS   (ADD FUTURAMENTE)
+├── yarn.lock                      (ADD FUTURAMENTE)
+├── requirements.txt            # Dependências do projeto
 ```
+
 
 ---
 
@@ -63,23 +65,16 @@ Acesse e contribua! 😉
 
 ----
 
-## 🧪 Como Executar Localmente
+## 📦 Requisitos
 
-```bash
-# 1. Clone o repositório
-git clone https://github.com/DermAlert/ml.git
-cd ml
-
-# 2. Crie um ambiente virtual
-python -m venv .venv
-source .venv/bin/activate  # Linux/macOS
-# .venv\Scripts\activate    # Windows
-
-# 3. Instale as dependências
-pip install -r requirements.txt
-```
+- Node.js >= 14
+- Yarn
+- Expo CLI (`npm install -g expo-cli`)
+- Docker (opcional)
+- Python 3.8+ (para backend e Airflow, se for usar)
 
 ---
+
 
 ## 🤝 Como Contribuir
 
@@ -87,17 +82,73 @@ Confira o [guia de contribuição](https://www.dermalert.ai/guia-de-contribuicao
 
 Contribuições bem-vindas:
 
-- feat: nova funcionalidade
-- fix: correção de bug
-- docs: alterações na documentação
-- style: mudanças visuais ou de formatação
-- refactor: refatoração sem mudança de funcionalidade
-- test: criação ou alteração de testes
-- chore: tarefas administrativas
+- :sparkles: feat: nova funcionalidade
+- :bug: fix: correção de bug
+- :books: docs: alterações na documentação
+- :art: style: mudanças visuais ou de formatação
+- :recycle: refactor: refatoração sem mudança de funcionalidade
+- :white_check_mark: test: criação ou alteração de testes
+- :wrench: chore: tarefas administrativas
 
   
 ---
 
+## 🚀 Como Executar
+
+### Localmente (sem Docker)
+
+1. Instale as dependências do frontend:
+
+```bash
+yarn install
+Inicie o servidor Expo:
+
+bash
+Copiar
+Editar
+yarn start
+Use o app Expo Go para testar no seu celular ou configure um emulador Android/iOS.
+
+```
+---
+
+### Com Docker
+
+1. Construa a imagem:
+
+```bash
+docker build -t ml-dermarlet .
+```
+
+2. Execute o container:
+
+```bash
+docker run -p 19000:19000 ml-dermarlet
+```
+
+> Acesse pelo QR Code no terminal ou manualmente usando o IP da máquina host.
+
+---
+
+## 🐳 Dockerfile  (EXEMPLO POIS AINDA NÃO EXISTE)
+
+```Dockerfile
+FROM node:14
+
+WORKDIR /app
+
+COPY package.json yarn.lock ./
+
+RUN yarn install
+
+COPY . .
+
+EXPOSE 19000
+
+CMD ["yarn", "start"]
+```
+
+---
 
 ## 📎 Links Importantes
 
@@ -108,9 +159,17 @@ Contribuições bem-vindas:
 
 ---
 
+## 📝 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
+
+---
 
 ## Histórico de Versões
 
 | Versão | Data | Descrição | Autor | Revisor |
 | :----: | ---- | --------- | ----- | ------- |
-| `1.0`  |23/04/2025| Adiciona descrição, link para gitpage e como rodar aplicação | [Esther Sena](https://github.com/esmsena) e Davi Araujo |   |
+| `1.0`  |23/04/2025| Adicionando descrição, link para gitpage e como rodar aplicação | [Esther Sena](https://github.com/esmsena) e [Davi Araújo](https://github.com/dcasseb) |   |
+| `1.1`  |25/04/2025| Adicionando as pastas no tópico de Estruturas do Repositório | [Renan Araújo](https://github.com/renantfm4)  |   |
+| `1.2`  |25/04/2025| Atualizando o tópico de Estruturas do Repositório e adicionando os topicos Requisitos, Como Executar Localmente (sem Docker), Com Docker, Dockerfile e Licença | [Esther Sena](https://github.com/esmsena) |   |
+
