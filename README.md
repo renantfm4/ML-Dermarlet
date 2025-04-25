@@ -28,7 +28,6 @@ Centralizar e organizar:
 ├── LICENSE                     # Licença do projeto
 ├── README.md                   # Documentação principal do repositório
 ├── requirements.txt            # Dependências do projeto
-└── mkdocs.yml                  # Configuração do MkDocs
 ```
 
 ---
