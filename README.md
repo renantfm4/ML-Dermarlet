@@ -112,3 +112,4 @@ Contribuições bem-vindas:
 | Versão | Data | Descrição | Autor | Revisor |
 | :----: | ---- | --------- | ----- | ------- |
 | `1.0`  |23/04/2025| Adiciona descrição, link para gitpage e como rodar aplicação | [Esther Sena](https://github.com/esmsena) e [Davi Araújo](https://github.com/dcasseb) |   |
+| `1.1`  |25/04/2025| Adicionando as pastas no tópico de Estruturas do Repositório | [Renan Araújo](https://github.com/renantfm4)  |   |
