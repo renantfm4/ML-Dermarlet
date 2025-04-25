@@ -18,9 +18,17 @@ Centralizar e organizar:
 ## 📁 Estrutura do Repositório
 
 ```bash
-├── aaaa/               # aaaaaa
-├── aaaaa          # aaaaaa
-
+├── config/                     # Arquivos de configuração do projeto
+├── dags/                       # Definições de DAGs para orquestração com Airflow
+├── data/                       # Dados do projeto, incluindo imagens divididas em treino e teste
+├── docs/                       # Documentação em Markdown para MkDocs
+├── src/                        # Código-fonte principal
+├── tests/                      # Testes automatizados
+├── .gitignore                  # Arquivos e pastas ignorados pelo Git
+├── LICENSE                     # Licença do projeto
+├── README.md                   # Documentação principal do repositório
+├── requirements.txt            # Dependências do projeto
+└── mkdocs.yml                  # Configuração do MkDocs
 ```
 
 ---
