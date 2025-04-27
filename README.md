@@ -61,19 +61,8 @@ Lá você encontra:
 - 🧪 Boas práticas e padrões adotados  
 - 📖 Outras informações técnicas relevantes
 
-Acesse e contribua! 😉
-
-----
-
-## 📦 Requisitos
-
-- Node.js >= 14
-- Yarn
-- Expo CLI (`npm install -g expo-cli`)
-- Docker (opcional)
-- Python 3.8+ (para backend e Airflow, se for usar)
-
 ---
+
 
 
 ## 🤝 Como Contribuir
@@ -90,63 +79,98 @@ Contribuições bem-vindas:
 - :white_check_mark: test: criação ou alteração de testes
 - :wrench: chore: tarefas administrativas
 
-  
----
+----
 
+## 📦 Requisitos
+
+- Python 3.10+
+- Virtualenv (opcional, mas recomendado)
+- Docker (para ambiente containerizado, opcional)
+- Git
+
+---
+  
 ## 🚀 Como Executar
 
-### Localmente (sem Docker)
-
-1. Instale as dependências do frontend:
+### 1. Clone o repositório
 
 ```bash
-yarn install
-Inicie o servidor Expo:
-
-bash
-Copiar
-Editar
-yarn start
-Use o app Expo Go para testar no seu celular ou configure um emulador Android/iOS.
-
+git clone https://github.com/renantfm4/ML-Dermarlet.git
+cd ML-Dermarlet
 ```
+
+### 2. Crie um ambiente virtual e ative
+
+```bash
+python -m venv .venv
+source .venv/bin/activate  # Linux/Mac
+.venv\Scripts\activate     # Windows
+```
+
+### 3. Instale as dependências
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Execute um exemplo de pipeline ou notebook
+
+```bash
+python src/train/train_pipeline.py
+```
+
+Ou abra um notebook em:
+
+```bash
+jupyter notebook
+```
+
 ---
 
-### Com Docker
+## 🐳 Dockerfile
 
-1. Construa a imagem:
+O projeto já está configurado com suporte Docker. Utilize o Dockerfile abaixo para construir o ambiente em contêineres.
+
+```Dockerfile
+# Use uma imagem base do Node.js
+FROM node:14
+
+# Defina o diretório de trabalho no container
+WORKDIR /app
+
+# Copie o arquivo package.json e yarn.lock
+COPY package.json yarn.lock ./
+
+# Instale as dependências do projeto
+RUN yarn install
+
+# Copie todo o código para o container
+COPY . .
+
+# Exponha a porta 19000 (porta padrão do Expo)
+EXPOSE 19000
+
+# Comando para rodar o servidor Expo
+CMD ["yarn", "start"]
+```
+
+---
+
+### 🐳 Como Rodar com Docker
+
+1. **Construa a imagem Docker**:
 
 ```bash
 docker build -t ml-dermarlet .
 ```
 
-2. Execute o container:
+2. **Execute o container**:
 
 ```bash
 docker run -p 19000:19000 ml-dermarlet
 ```
 
-> Acesse pelo QR Code no terminal ou manualmente usando o IP da máquina host.
-
----
-
-## 🐳 Dockerfile  (EXEMPLO POIS AINDA NÃO EXISTE)
-
-```Dockerfile
-FROM node:14
-
-WORKDIR /app
-
-COPY package.json yarn.lock ./
-
-RUN yarn install
-
-COPY . .
-
-EXPOSE 19000
-
-CMD ["yarn", "start"]
-```
+Acesse o aplicativo usando o QR Code exibido no terminal ou manualmente pelo IP da máquina host.
 
 ---
 
@@ -169,7 +193,8 @@ Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalh
 
 | Versão | Data | Descrição | Autor | Revisor |
 | :----: | ---- | --------- | ----- | ------- |
-| `1.0`  |23/04/2025| Adicionando descrição, link para gitpage e como rodar aplicação | [Esther Sena](https://github.com/esmsena) e [Davi Araújo](https://github.com/dcasseb) |   |
-| `1.1`  |25/04/2025| Adicionando as pastas no tópico de Estruturas do Repositório | [Renan Araújo](https://github.com/renantfm4)  |   |
-| `1.2`  |25/04/2025| Atualizando o tópico de Estruturas do Repositório e adicionando os topicos Requisitos, Como Executar Localmente (sem Docker), Com Docker, Dockerfile e Licença | [Esther Sena](https://github.com/esmsena) |   |
+| `1.0`  |23/04/2025| Adicionando descrição, link para gitpage e como rodar aplicação | [Esther Sena](https://github.com/esmsena) e [Davi Araújo](https://github.com/dcasseb) | [Renan Araújo](https://github.com/renantfm4)  |
+| `1.1`  |25/04/2025| Adicionando as pastas no tópico de Estruturas do Repositório | [Renan Araújo](https://github.com/renantfm4)  | [Esther Sena](https://github.com/esmsena)  |
+| `1.2`  |25/04/2025| Atualizando o tópico de Estruturas do Repositório e adicionando os topicos Requisitos, Como Executar Localmente (sem Docker), Com Docker, Dockerfile e Licença | [Esther Sena](https://github.com/esmsena) | [Renan Araújo](https://github.com/renantfm4) |
+| `1.2`  |27/04/2025| Atualizando o tópico de Estruturas do Repositório e adicionando os topicos Requisitos, Como Executar Localmente (sem Docker), Com Docker e adicionando Como Rodar com Docker e excluíndo Dockerfile (EXEMPLO POIS AINDA NÃO EXISTE) | [Esther Sena](https://github.com/esmsena) |[Renan Araújo](https://github.com/renantfm4)   |
 
