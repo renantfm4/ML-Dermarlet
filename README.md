@@ -41,6 +41,7 @@ Centralizar e organizar:
 - `Python 3.10+`
 - `TensorFlow` / `Keras` ou `PyTorch`
 - `Scikit-learn`
+- `Pillow`
 - `OpenCV`
 - `Pandas`, `NumPy`, `Matplotlib`, `Seaborn`
 - `MLflow` / `DVC`
@@ -161,7 +162,7 @@ CMD ["yarn", "start"]
 1. **Construa a imagem Docker**:
 
 ```bash
-docker build -t ml-dermarlet .
+docker run -it --rm -p 8000:8000 ml-dermalert
 ```
 
 2. **Execute o container**:
