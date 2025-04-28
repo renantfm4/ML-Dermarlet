@@ -33,7 +33,6 @@ Centralizar e organizar:
 ├── requirements.txt            # Dependências do projeto
 ```
 
-
 ---
 
 ## 🚀 Tecnologias Utilizadas
@@ -62,9 +61,27 @@ Lá você encontra:
 - 🧪 Boas práticas e padrões adotados  
 - 📖 Outras informações técnicas relevantes
 
+Acesse e contribua! 😉
+
+----
+
+## 🧪 Como Executar Localmente
+
+```bash
+# 1. Clone o repositório
+git clone https://github.com/DermAlert/ml.git
+cd ml
+
+# 2. Crie um ambiente virtual
+python -m venv .venv
+source .venv/bin/activate  # Linux/macOS
+# .venv\Scripts\activate    # Windows
+
+# 3. Instale as dependências
+pip install -r requirements.txt
+```
+
 ---
-
-
 
 ## 🤝 Como Contribuir
 
@@ -171,8 +188,8 @@ docker run -it --rm -p 8000:8000 ml-dermalert
 docker run -p 19000:19000 ml-dermarlet
 ```
 
-Acesse o aplicativo usando o QR Code exibido no terminal ou manualmente pelo IP da máquina host.
-
+Acesse o aplicativo usando o QR Code exibido no terminal ou manualmente pelo IP da máquina host
+  
 ---
 
 ## 📎 Links Importantes
@@ -198,4 +215,3 @@ Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalh
 | `1.1`  |25/04/2025| Adicionando as pastas no tópico de Estruturas do Repositório | [Renan Araújo](https://github.com/renantfm4)  | [Esther Sena](https://github.com/esmsena)  |
 | `1.2`  |25/04/2025| Atualizando o tópico de Estruturas do Repositório e adicionando os topicos Requisitos, Como Executar Localmente (sem Docker), Com Docker, Dockerfile e Licença | [Esther Sena](https://github.com/esmsena) | [Renan Araújo](https://github.com/renantfm4) |
 | `1.2`  |27/04/2025| Atualizando o tópico de Estruturas do Repositório e adicionando os topicos Requisitos, Como Executar Localmente (sem Docker), Com Docker e adicionando Como Rodar com Docker e excluíndo Dockerfile (EXEMPLO POIS AINDA NÃO EXISTE) | [Esther Sena](https://github.com/esmsena) |[Renan Araújo](https://github.com/renantfm4)   |
-
