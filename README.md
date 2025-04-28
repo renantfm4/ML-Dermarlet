@@ -63,24 +63,6 @@ Lá você encontra:
 
 Acesse e contribua! 😉
 
-----
-
-## 🧪 Como Executar Localmente
-
-```bash
-# 1. Clone o repositório
-git clone https://github.com/DermAlert/ml.git
-cd ml
-
-# 2. Crie um ambiente virtual
-python -m venv .venv
-source .venv/bin/activate  # Linux/macOS
-# .venv\Scripts\activate    # Windows
-
-# 3. Instale as dependências
-pip install -r requirements.txt
-```
-
 ---
 
 ## 🤝 Como Contribuir
